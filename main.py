@@ -1,7 +1,7 @@
 import requests
 
 # Replace YOUR_APP_ID with your own API access key
-API_URL = "https://openexchangerates.org/api/latest.json?app_id=0314b9a2e7f043b1886ff9648cbf116a"
+API_URL = "https://openexchangerates.org/api/latest.json?app_id=YOUR_API_KEY"
 
 # Make a GET request to the API and get the response
 response = requests.get(API_URL)
