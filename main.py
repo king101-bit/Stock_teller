@@ -10,13 +10,14 @@ response = requests.get(API_URL)
 if response.status_code == 200:
     data = response.json()
 
-    # Get the exchange rates for USD and GBP
-    usd_rate = data['rates']['USD']
-    gbp_rate = data['rates']['GBP']
+    # Get the exchange rate for NGN
     ngn_rate = data['rates']['NGN']
 
-    # Print the exchange rates
-    print(f"1 USD = ₦{ngn_rate/usd_rate:.2f}")
-    print(f"1 GBP = ₦{ngn_rate/gbp_rate:.2f}")
+    # Prompt the user to input an amount in USD
+    usd_amount = float(input("Enter amount in USD: "))
+
+    # Convert USD to NGN and print the result
+    ngn_amount = usd_amount * ngn_rate
+    print(f"{usd_amount:.2f} USD = ₦{ngn_amount:.2f}")
 else:
     print("Failed to retrieve exchange rates.")
