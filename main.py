@@ -1,7 +1,7 @@
 import requests
 
 # Replace YOUR_API_KEY with your own API access key
-API_URL = "https://openexchangerates.org/api/latest.json?app_id=0314b9a2e7f043b1886ff9648cbf116a"
+API_URL = "https://openexchangerates.org/api/latest.json?app_id=YOUR_API_KEY"
 
 # Prompt the user to input the currency code and amount in USD
 currency_code = input("Enter the currency code you want to convert USD to (e.g. EUR, GBP, NGN): ").upper()
